@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #edeeed;
+}
+.drops{
+    position: relative;
+}
+.drop{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border-radius: 50% 50% 30% 70% / 47% 58% 42% 53% ;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.2),
+                        15px 25px 10px rgba(0, 0, 0, 0.2),
+                        15px 20px 20px rgba(0, 0, 0, 0.2),
+                inset -10px -10px 15px rgba(255, 255, 255, 2);
+}
+.drop::before{
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 59% 41% 30% 70% / 39% 38% 62% 61% ;
+}
+.drop::after{
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 70px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 59% 41% 30% 70% / 39% 38% 62% 61% ;
+}
+
+.drop:nth-child(2){
+    transform: scale(0.5) translate(-200px,180px);
+    border-radius:54% 46% 40% 60% / 37% 35% 65% 63%  ;
+}
+.drop:nth-child(3){
+    transform: scale(0.5) translate(280px,10px);
+    border-radius:49% 51% 45% 55% / 50% 40% 60% 50%  ;
+}
+.drop:nth-child(4){
+    transform: scale(0.40) translate(120px,-350px);
+    border-radius: 49% 51% 70% 30% / 71% 40% 60% 29% ;
+}
